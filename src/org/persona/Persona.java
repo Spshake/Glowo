@@ -11,4 +11,7 @@ package org.persona;
  */
 public class Persona {
     
+    private String nombreApellido; 
+    private String dni;
+    
 }
