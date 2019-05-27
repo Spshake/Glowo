@@ -12,6 +12,30 @@ package org.persona;
 public class Persona {
     
     private String nombreApellido; 
-    private String dni;
+    private String correo;
+
+    
+    //Constructor
+    public Persona(String nombreApellido, String correo) {
+        this.nombreApellido = nombreApellido;
+        this.correo = correo;
+    }
+    
+    //Get and Set
+    public String getNombreApellido() {
+        return nombreApellido;
+    }
+
+    public void setNombreApellido(String nombreApellido) {
+        this.nombreApellido = nombreApellido;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
     
 }
