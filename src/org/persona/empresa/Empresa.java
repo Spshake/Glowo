@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.persona.cliente;
+package org.persona.empresa;
 
 /**
  *
- * @author Gonzalo
+ * @author amx_c
  */
-public class asd {
+public class Empresa {
     
 }

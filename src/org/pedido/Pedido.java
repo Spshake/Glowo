@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.persona.repartidor;
+package org.pedido;
 
 /**
  *
- * @author Gonzalo
+ * @author amx_c
  */
-public class asd {
+public class Pedido {
+    
+    private String numeroPedido; 
     
 }
