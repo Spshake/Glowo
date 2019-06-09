@@ -5,14 +5,26 @@
  */
 package org.persona.empresa;
 
+import org.persona.clienteEmpresa.ClienteEmpresa;
+
 /**
  *
  * @author amx_c
  */
-public class Empresa {
+public class Empresa extends ClienteEmpresa{
     private String tipoEmpresa;
 
-    public Empresa(String tipoEmpresa) {
+    public Empresa(String nombreApellido, String correo, String dni, String provincia, String ciudad, String domicilio, String fechaNac, String telefono) {
+        super(nombreApellido, correo, dni, provincia, ciudad, domicilio, fechaNac, telefono);
+    }
+
+    public Empresa(String tipoEmpresa, String nombreApellido, String correo, String dni, String provincia, String ciudad, String domicilio, String fechaNac, String telefono) {
+        super(nombreApellido, correo, dni, provincia, ciudad, domicilio, fechaNac, telefono);
+        this.tipoEmpresa = tipoEmpresa;
+    }
+
+    public Empresa(String tipoEmpresa, String nombreEmpresa, String nombreApellido, String correo, String dni, String provincia, String ciudad, String domicilio, String fechaNac, String telefono) {
+        super(nombreEmpresa, nombreApellido, correo, dni, provincia, ciudad, domicilio, fechaNac, telefono);
         this.tipoEmpresa = tipoEmpresa;
     }
 
@@ -23,6 +35,8 @@ public class Empresa {
     public void setTipoEmpresa(String tipoEmpresa) {
         this.tipoEmpresa = tipoEmpresa;
     }
+
+
     
     
 }
