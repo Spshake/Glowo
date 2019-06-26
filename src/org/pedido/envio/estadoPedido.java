@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.dao;
+package org.pedido.envio;
 
 /**
  *
  * @author Gonzalo
  */
-public class asd {
+class estadoPedido {
     
 }

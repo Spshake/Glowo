@@ -5,6 +5,7 @@
  */
 package org.pedido;
 
+import org.pedido.envio.Envio;
 import org.pedido.estadoPedido.EstadoPedido;
 
 /**
@@ -27,5 +28,6 @@ public class Pedido extends EstadoPedido{
 
     public Pedido(String nombre, String descripcion) {
         super(nombre, descripcion);
+        Envio envio;
     }
 }

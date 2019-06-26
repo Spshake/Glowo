@@ -29,16 +29,16 @@ public class TipoPedido extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBox1 = new javax.swing.JComboBox<String>();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBox2 = new javax.swing.JComboBox<String>();
         jLabel5 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        jtxt_quetellevamos = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
@@ -46,8 +46,8 @@ public class TipoPedido extends javax.swing.JPanel {
         jLabel9 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
+        jComboBox3 = new javax.swing.JComboBox<String>();
+        jbtn_hacerPedido = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
         jLabel1.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
@@ -55,7 +55,7 @@ public class TipoPedido extends javax.swing.JPanel {
 
         jLabel2.setText("Tipo");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alimentos", "Farmacia", "Kiosko", "Órganos", "Cualquier cosa" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Alimentos", "Farmacia", "Kiosko", "Órganos", "Cualquier cosa" }));
 
         jLabel3.setText("¿Cómo lo pagás?");
 
@@ -65,7 +65,7 @@ public class TipoPedido extends javax.swing.JPanel {
 
         jRadioButton2.setText("No");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tarjeta", "Efectivo", "Débito", "Sexo" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Tarjeta", "Efectivo", "Débito", "Sexo" }));
 
         jLabel5.setText("¿Dónde te lo llevamos?");
 
@@ -73,15 +73,26 @@ public class TipoPedido extends javax.swing.JPanel {
 
         jLabel7.setText("Dimensiones");
 
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+
         jLabel8.setText("Peso");
 
         jLabel9.setText("Cantidad");
 
         jLabel10.setText("¿Qué tipo de envío querés?");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Express", "Normal" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Express", "Normal" }));
 
-        jButton1.setText("Hacer pedido");
+        jbtn_hacerPedido.setText("Hacer pedido");
+        jbtn_hacerPedido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtn_hacerPedidoActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Cancelar pedido");
 
@@ -103,7 +114,7 @@ public class TipoPedido extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField2)))
+                        .addComponent(jtxt_quetellevamos)))
                 .addGap(10, 10, 10))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
@@ -140,7 +151,7 @@ public class TipoPedido extends javax.swing.JPanel {
                         .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(jbtn_hacerPedido)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton2)))
                 .addContainerGap())
@@ -155,7 +166,7 @@ public class TipoPedido extends javax.swing.JPanel {
                     .addComponent(jLabel2)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtxt_quetellevamos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
@@ -181,15 +192,28 @@ public class TipoPedido extends javax.swing.JPanel {
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(jbtn_hacerPedido)
                     .addComponent(jButton2))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jbtn_hacerPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_hacerPedidoActionPerformed
+      /*  if(txt_nombre!="" && ){
+            FacturaDaoImple.guardar;
+        }
+        else{
+            
+        }*/
+            
+    }//GEN-LAST:event_jbtn_hacerPedidoActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
@@ -207,9 +231,10 @@ public class TipoPedido extends javax.swing.JPanel {
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JButton jbtn_hacerPedido;
+    private javax.swing.JTextField jtxt_quetellevamos;
     // End of variables declaration//GEN-END:variables
 }
